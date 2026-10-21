@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Colab Drive Access: a personal research utility for transferring files between Google Drive and Google Colab, operated by Sam Chen.">
+  <title>Overview | Colab Drive Access</title>
+  <style>:root{color-scheme:light;--ink:#182b35;--muted:#53616a;--accent:#18665e;--line:#d7dfdc;--paper:#fafaf6}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font:17px/1.75 system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+a{color:var(--accent);text-underline-offset:4px}a:hover{text-decoration-thickness:2px}a:focus-visible{outline:3px solid var(--accent);outline-offset:5px}
+.skip{position:absolute;left:1rem;top:-5rem}.skip:focus{top:1rem;background:white;padding:.5rem}
+header,main,footer{max-width:780px;margin:auto;padding-left:28px;padding-right:28px}header{display:flex;align-items:center;justify-content:space-between;gap:24px;padding-top:28px;padding-bottom:24px;border-bottom:1px solid var(--line)}
+.wordmark{font-size:15px;font-weight:700;text-decoration:none;letter-spacing:.02em}nav{display:flex;gap:22px;font-size:14px}nav a{text-decoration:none}nav a[aria-current]{text-decoration:underline;font-weight:650}
+main{padding-top:58px;padding-bottom:60px}.eyebrow{margin:0 0 12px;font-size:12px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--accent)}
+h1,h2{line-height:1.2;font-weight:600}h1{font-family:Georgia,"Times New Roman",serif;font-size:clamp(35px,6vw,49px);letter-spacing:-.025em;margin:0 0 24px}h2{font-size:21px;margin:36px 0 12px}
+p{margin:0 0 18px}.lead{font-size:21px;line-height:1.6;color:var(--muted)}ul{padding-left:23px}li{padding:3px 0}code{font-size:.85em;background:#edf1ed;padding:2px 5px;border-radius:3px}
+.notice{border-left:3px solid var(--accent);padding:14px 20px;background:#eef3ee;margin:30px 0}.notice p:last-child{margin:0}.links{display:flex;gap:25px;margin-top:28px;font-weight:600}
+footer{padding-top:22px;padding-bottom:34px;border-top:1px solid var(--line);font-size:13px;color:var(--muted)}footer p{margin:0 0 4px}
+@media(max-width:540px){header{align-items:flex-start;flex-direction:column;gap:14px}main{padding-top:38px}nav{gap:22px}.lead{font-size:19px}}
+@media print{body{background:white;font-size:12pt}header,footer{font-size:10pt}main{padding-top:20px}.skip{display:none}}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header><a class="wordmark" href="index.html">Colab Drive Access</a><nav aria-label="Main navigation"><a href="index.html" aria-current="page">Overview</a><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a></nav></header>
+<main id="main">
+<p class="eyebrow">Personal research utility</p>
+<h1>Colab Drive Access</h1>
+<p class="lead">Transfer research files between Google Drive and a Google Colab runtime, using a saved authorization.</p>
+<p>This utility is operated by Sam Chen for personal research. It downloads selected inputs to a Colab runtime and uploads new result files to Drive through the Google Drive API.</p>
+<p>A saved OAuth refresh credential lets the notebook renew authorization in later runtime sessions. The utility does not mount the entire Drive as a runtime folder.</p>
+<h2>Google Drive permissions</h2>
+<ul>
+<li><code>drive.readonly</code> permits reading and downloading existing Drive files.</li>
+<li><code>drive.file</code> permits creating files and managing files authorized for this app. The supplied helper creates new output files and implements no deletion operation.</li>
+</ul>
+<div class="notice"><p>Only the operator’s own Google account is intended to authorize this utility. This website provides information about the app; it does not collect files or offer public account registration.</p></div>
+<h2>How files and credentials are handled</h2>
+<p>Files transfer directly between Google Drive and the operator’s Google Colab runtime or local computer. The reusable credential is stored in Colab Secrets and is kept out of notebook source and outputs.</p>
+<p>This is a personal utility, not a university service. Google Drive and Colab retain their own terms and usage limits.</p>
+<div class="links"><a href="privacy.html">Read the privacy notice</a><a href="terms.html">Terms of use</a></div>
+</main>
+<footer><p>Operated by Sam Chen · Personal research utility</p><p>Contact: <a href="mailto:sam.chen@unine.ch">sam.chen@unine.ch</a> · Updated 21 October 2026</p></footer>
+</body>
+</html>
